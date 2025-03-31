@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="Card">
+        <div class="card-content">
+            <div id="icon-box">
+                <img id="icon" src="assets/graduation-hat.png" alt="icon">
+            </div>
+            <form class="form" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+                <div id="input-box">
+                    <input type="email" formControlName="email" placeholder="Email">
+                </div>
+                <div id="input-box">
+                    <input type="number" formControlName="pin" placeholder="Pin">
+                </div>
+                <div id="button">
+                    <button type="submit">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
