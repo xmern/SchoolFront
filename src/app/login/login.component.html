@@ -9,10 +9,10 @@
                     <input type="email" formControlName="email" placeholder="Email">
                 </div>
                 <div id="input-box">
-                    <input type="number" formControlName="pin" placeholder="Pin">
+                    <input type="number" formControlName="password" placeholder="Pin">
                 </div>
                 <div id="button">
-                    <button type="submit">Sign In</button>
+                    <button type="submit" [disabled]="!reactiveForm.valid">Sign In</button>
                 </div>
             </form>
         </div>
