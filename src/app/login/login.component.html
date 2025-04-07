@@ -9,10 +9,10 @@
                     <input type="email" formControlName="email" placeholder="Email">
                 </div>
                 <div id="input-box">
-                    <input type="number" formControlName="password" placeholder="Pin">
+                    <input type="text" formControlName="password" placeholder="Pin" pattern="[0-9]*" inputmode="numeric">
                 </div>
                 <div id="button">
-                    <button type="submit" [disabled]="!reactiveForm.valid">Sign In</button>
+                    <button  type="submit" [disabled]="!reactiveForm.valid" [ngStyle]="!reactiveForm.valid ? {'background-color': '#cecece', 'color': 'black'} : {}">Sign In</button>
                 </div>
             </form>
         </div>

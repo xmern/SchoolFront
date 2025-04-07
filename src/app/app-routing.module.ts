@@ -6,7 +6,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:"home", component:HomeComponent},
-  {path:"login", component:LoginComponent}
+  {path:"login", component:LoginComponent},
+  {path:"student-dashboard",loadChildren:() => import('./student-dashboard/student-dashboard.module').then(m=>m.StudentDashboardModule) }
 ];
 
 @NgModule({

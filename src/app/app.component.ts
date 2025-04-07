@@ -21,7 +21,11 @@ export class AppComponent implements OnInit{
   }
   updateLogin(isLoggedIn:boolean){
     if (isLoggedIn) {
-      this.router.navigate(["home"])
+      let user = this.authService.getUser()
+      if (user.role == "Student"){
+        this.router.navigate(["student-dashboard/dashboard"])
+      }
+      
     } else {
       this.router.navigate(["login"])
     }

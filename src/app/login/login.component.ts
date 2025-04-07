@@ -7,6 +7,7 @@ import { JwtDecoderService } from '../Auth/jwt-decoder.service';
 import { User } from '../interfaces/User';
 import { DecodedLoginJwt } from '../interfaces/login-jwtDecoded';
 import { AuthServiceService } from '../Auth/auth-service.service';
+import { LoginErrorDto } from '../interfaces/login-error';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,7 +18,7 @@ export class LoginComponent {
   constructor(private fb: FormBuilder, private httpGateway: HttpGatewayServiceService, private jwtbreaker : JwtDecoderService, private authService : AuthServiceService){
     this.reactiveForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
     })
 
   }
@@ -41,7 +42,9 @@ export class LoginComponent {
         
       },
       error: (error) => {
-        console.error('Login failed:', error);
+        var errors:LoginErrorDto =  error.error
+        //console.log(errors)
+        //console.error('Login failed:', error);
         // 👉 Handle error, maybe show an error message to the user
       },
     });
