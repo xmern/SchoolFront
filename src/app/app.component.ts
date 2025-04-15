@@ -24,6 +24,8 @@ export class AppComponent implements OnInit{
       let user = this.authService.getUser()
       if (user.role == "Student"){
         this.router.navigate(["student-dashboard/dashboard"])
+      }else if( user.role == "Administrator"){
+        this.router.navigate(["admin-dashboard/"])
       }
       
     } else {
