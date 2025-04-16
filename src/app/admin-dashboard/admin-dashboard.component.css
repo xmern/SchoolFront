@@ -1,36 +1,81 @@
 .container {
     display: grid;
-    grid-gap: 4px;
-    grid-template-rows: 10vh 87vh;
-    grid-template-columns: 18vw 82vw;
-    background-color: #e4e4e4;
+    /* grid-gap: 1px; */
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 13vw 87vw;
+    background-color: #f0eef3;
+}
+#icon-box{
+  max-width: 32px;
+  max-height: 32px;
+    
+}
+#icon{
+  max-width: 64px;
+  max-height: 64px;
 }
 
 .navbar {
     grid-row: 2;
     grid-column: 1;
-    background-color: green;
+    background-color: #544a85;
+
 }
   
 .profile {
     grid-row: 1;
     grid-column: 1;
-    background-color: aquamarine;
+    background-color: #544a85;
+    display:grid;
+
 }
   
 .search {
     grid-row: 1;
     grid-column: 2;
-    background-color: aquamarine;
+    background-color: #f0eef3;
 }
   
 .content {
     grid-row: 2;
     grid-column: 2;
-    background-color: red;
+    /* background-color: #ceffda; */
+    background: linear-gradient(135deg, #f0eef3, #f0eef3);
     overflow-y: scroll;
 }
-
+.button{
+  background: #544a85;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px 0px 0px 15px;
+  color: white;
+  
+}
+#navButton{
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: white;
+  /* transition: all 0.3s ease-in-out; */
+}
+#navButton:hover {
+  /* background: #ceffda; */
+  color: black;
+}
+.button:hover{
+  background: #796bc0;
+  color: black;
+  #navButton{
+    color: black;
+  }
+}
+.selectedButton{
+  background-color: #f0eef3;
+  #navButton{
+    color: black;
+  }
+}
+/* 768px */
 @media (max-width: 768px) {
     .container {
       grid-template-rows: auto;

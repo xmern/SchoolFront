@@ -1,6 +1,17 @@
 <div class="container">
-    <div class="profile">1</div>
-    <div class="search">2</div>
-    <div class="content">4</div>
-    <div class="navbar">3</div>
+    <div class="profile">            
+        <div id="icon-box">
+            <img id="icon" src="assets/graduation-hat.png" alt="icon">
+        </div>
+    </div>
+    <div class="search"></div>
+    <div class="content"><router-outlet /></div>
+    <div class="navbar">
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.dashboard}" (click)="loadDashboard()"><button id="navButton" >Dash board</button></div>
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.classes}" (click)="loadClassDashboard()"><button id="navButton" >Classes</button></div>
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.classrooms}"><button id="navButton">Class Rooms</button></div>
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.teachers}"><button id="navButton">Teachers</button></div>
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.subjects}"><button id="navButton">Subjects</button></div>
+        <div class="button" [ngClass]="{'selectedButton':routeStatus.students}"><button id="navButton">Students</button></div>
+    </div>
 </div>
