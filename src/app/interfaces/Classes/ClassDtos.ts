@@ -1,6 +1,6 @@
 export interface ClassesDto{
-    Id:string
-    Name:string
+    id:string
+    name:string
 }
 export interface clas{
     

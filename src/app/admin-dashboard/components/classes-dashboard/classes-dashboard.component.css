@@ -1,3 +1,31 @@
 .container{
     height: 100%;
+
 }
+.content {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start; /* adjust if you want vertical center */
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .classTable {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .tableItem {
+    /* Example style, adjust as needed */
+    padding: 0.2rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .tableItem:hover{
+    background-color: #f0eef3;
+  }

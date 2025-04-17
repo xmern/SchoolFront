@@ -1,6 +1,12 @@
 <div class="container">
     <router-outlet/>
     <div class="content">
+        <div class="classTable" *ngIf="routeStatus.allClasses">
+            <div><p>Registered classes</p></div>
+            <div class="tableItem" *ngFor="let class of allClasses">
+                <p>{{class.name}}</p>
+            </div> 
+        </div>
 
     </div>
 </div>

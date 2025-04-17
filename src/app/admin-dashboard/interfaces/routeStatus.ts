@@ -6,3 +6,6 @@ export interface RouteStatus{
     subjects:boolean,
     students:boolean
 }
+export interface ClassesRouteStatus{
+    allClasses:boolean
+}
